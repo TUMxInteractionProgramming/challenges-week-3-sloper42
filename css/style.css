@@ -52,6 +52,9 @@ h1 span {
     position: absolute;
     left: 72px;
 }
+
+
+
 /* Left Alight channels */
 #channels 
 {
@@ -136,8 +139,15 @@ li img {
     display: initial;
     text-align: left;
     padding: 0px;
+
 }
 
+#star {
+   /* position: absolute;
+    right: 16px;
+    float:right; */
+    justify-content: flex-end;
+}
 #emojis {
 
     position: absolute;
@@ -152,6 +162,7 @@ li img {
     padding:16px;
     margin: 16px;
     overflow: auto;
+    display: none;
 }
 
 /* #4 #tab-bar buttons do have a #line-break and images are centered due to the left&right auto margin */

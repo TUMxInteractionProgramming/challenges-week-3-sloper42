@@ -10,7 +10,8 @@
     <!-- #4 #sweat out the styles by creating an #external css -->
     <link rel="stylesheet" href="css/style.css" />
 
-    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </head>
 <body>
 <!-- #4 #one #page -->
@@ -19,11 +20,13 @@
         <!-- #3 #channels #moocus the talkative duck-->
         <img src="http://ip.lfe.mw.tum.de/sections/moocus.png" alt="Moocus, the chatty duck!" >
         <span>chatter|app</span>
+      
     </h1>
 
     <!-- #3 #channels #list is much better, than headlines or paragraphs... -->
     <ul>
-        <li>#Yummy
+        <li onclick="switchChannel('Yummy');">
+            <span id="Yummy">#Yummy</span>
             <!-- #3 #channels #favorite this is not starred -->
             <span class="channel-meta">
             <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred">
@@ -32,29 +35,32 @@
         </li>
 
         <!-- #4 #channel is #highlighted -->
-        <li class="selected">
-            #SevenContinents
+        <li onclick="switchChannel('SevenContinents');" class="selected">
+            <span id="SevenContinents">#SevenContinents</span>
             <!-- #3 #channels #favorite this is starred -->
             <span class="channel-meta">
                 <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred">
                 <img src="https://makeyourownapp.github.io/myoa-course/assets/images/challenges/challenge-5-chevron-right.png" alt="chevron-right">
                 </span>       
         </li>
-        <li>#KillerApp
+        <li onclick="switchChannel('KillerApp');">
+            <span id="KillerApp">#KillerApp</span>
             <!-- #3 #channels #favorite this is not starred -->
             <span class="channel-meta">
                 <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred">
                 <img src="https://makeyourownapp.github.io/myoa-course/assets/images/challenges/challenge-5-chevron-right.png" alt="chevron-right">
                 </span>  
         </li>
-        <li>#FirstPersonOnMars
+        <li onclick="switchChannel('FirstPersonOnMars');">
+            <span id="FirstPersonOnMars">#FirstPersonOnMars</span>
             <!-- #3 #channels #favorite this is starred -->
             <span class="channel-meta">
                 <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred">
                 <img src="https://makeyourownapp.github.io/myoa-course/assets/images/challenges/challenge-5-chevron-right.png" alt="chevron-right">
                 </span>  
         </li>
-        <li>#Octoberfest
+        <li onclick="switchChannel('Octoberfest');">
+            <span id="Octoberfest">#Octoberfest</span>
             <!-- #3 #channels #favorite this is not starred -->
             <span class="channel-meta">
                 <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred">
@@ -91,6 +97,7 @@
         <small>by
             <strong>cheeses.yard.applies</strong>
         </small>
+        <img id="star" onclick="star();" src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred">
     </h1>
 
     <!-- #3 #chat #container -->
@@ -99,7 +106,7 @@
     <div class="message own">
         <h3>
             <!-- #3 #chat #location points to w3w in a new tab -->
-            <a href="http://w3w.co/cheeses.yard.applies" target="_blank">
+            <a id="location1" href="http://w3w.co/cheeses.yard.applies" target="_blank">
                 <strong>cheeses.yard.applies</strong>
             </a>
             Wed, June 20th, 13:37
@@ -184,7 +191,7 @@
         <button>+5 min.</button>
     </div>
 
-    <div id="chat-bar"><button id="emojis-button"><img 
+    <div id="chat-bar"><button onclick="toggleEmojis();" id="emojis-button"><img 
         src="http://ip.lfe.mw.tum.de/sections/smile-o.png" alt="smile">
         </button><div id="emojis">&#x1F601; &#x1F602; &#x1F603;
          &#x1F604; &#x1F605;</div></div>
